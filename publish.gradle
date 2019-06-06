@@ -1,0 +1,11 @@
+apply plugin: 'maven'
+
+project.group = GROUP
+version = VERSION_NAME
+
+apply from: 'https://github.com/LongHed/GradleLib/raw/master/release.gradle'
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+artifacts.add('archives', sourcesJar)
