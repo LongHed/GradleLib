@@ -1,0 +1,4 @@
+// Common Android tasks for all releases that generate Javadocs, sources, etc.
+apply from: 'android-tasks.gradle'
+
+apply from: 'release-sonatype.gradle'
